@@ -1,0 +1,143 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    background: yellowgreen;
+    font-family: sans-serif;
+}
+
+header {
+    height: 40px;
+    padding: 5px 10px;
+}
+
+header h1 {
+    font-size: 30px;
+    height: 30px;
+    display: block;
+    font-family: sans-serif;
+    float: left;
+    margin: 0;
+    padding-right: 1em;
+    cursor: pointer;
+    text-decoration-style: dashed;
+}
+
+header #fields {
+    height: 30px;
+    font-size: 30px;
+}
+
+.rotate {
+    -webkit-animation: rotation 4s infinite linear;
+}
+
+@-webkit-keyframes rotation {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(359deg);
+    }
+}
+
+header #fields input,
+header #fields p {
+    font-size: 26px;
+    font-weight: bold;
+    padding: 5px;
+    margin: 0;
+    display: inline-block;
+    vertical-align: top;
+    border: 0;
+    outline: none;
+    background: rgba(255, 255, 255, 0.3);
+}
+
+header #fields input:-webkit-autofill {
+    transition: background-color 9000s ease-in-out 0s;
+}
+
+header #fields input:focus {
+    box-shadow: 0 0 20px lightblue;
+    background: rgba(255, 255, 255, 0.4);
+}
+
+#radius-field {
+    -webkit-appearance: none;
+    height: 30px;
+    outline: none;
+}
+
+#radius-field::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background: #4CAF50;
+    cursor: pointer;
+}
+
+#radius-field::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    background: #4CAF50;
+    cursor: pointer;
+}
+
+#results {
+    font-size: 0;
+}
+
+#results h2 {
+    font-size: 80px;
+    text-align: center;
+    margin-top: 150px;
+}
+
+#results .error {
+    text-align: center;
+    color: red;
+    font-size: 20px;
+}
+
+.stop {
+    width: 50%;
+    display: inline-block;
+    font-size: 20px;
+    vertical-align: top;
+    font-size: 20px;
+}
+
+.stop .stopName,
+.stop .arrival {
+    width: 90%;
+    padding: 20px 5%;
+}
+
+.stop .stopName {
+    background: black;
+    color: yellowgreen;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.stop .arrival {
+    font-size: 16px;
+}
+
+.stop .arrival .lineName {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.stop .arrival .destination {
+    opacity: 0.6;
+    font-size: 18px;
+}
+
+.stop .arrival .timeToStation {
+    font-weight: bold;
+    font-size: 20px;
+    color: #000;
+}

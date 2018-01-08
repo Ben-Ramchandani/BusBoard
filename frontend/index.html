@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>BusBoard</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="departures.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1 onclick="switchType()" id="title">BusBoard</h1>
+        <div id="fields">
+            <form action="javascript:void(0)" onsubmit="postcodeSubmitted();">
+                <input type="text" name="postcode" placeholder="Postcode" autofocus id="postcode-field" onblur="postcodeChangeCancelled();" spellcheck="false">
+                <input type="range" min="100" value="200" max="2000" step="100" onchange="radiusChanged();" id="radius-field">
+                <p style="background: none" id="radius-display">200m</p>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+
+    </header>
+    <div id="results">
+
+    </div>
+</body>
+
+</html>
